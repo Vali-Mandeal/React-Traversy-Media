@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Navbar from './components/layout/Navbar';
+import UserItem from './components/users/UserItem';
+
 class App extends Component {
-  foo = () => 'Bars';
-
   render() {
-    const name = 'John doe';
-    const loading = false;
-    const showName = false;
-
     return (
       <div className='App'>
-        {loading ? <h4>Loading...</h4> : <h1>Hello {showName && name}</h1>}
+        <Navbar/>
+        <UserItem/>
       </div>
     );
   }
