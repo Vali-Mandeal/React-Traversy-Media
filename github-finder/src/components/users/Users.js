@@ -25,7 +25,7 @@ const userStyle = {
   gridGap: '1rem'
 };
 
-Users.prototypes = {
+Users.propTypes = {
     users: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired
 }
