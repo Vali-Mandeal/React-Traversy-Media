@@ -37,7 +37,7 @@ class User extends Component {
       hireable
     } = this.props.user;
 
-    const { loading, repos } = this.props;
+    const { loading, repos } = this.props; 
 
     if (loading) return <Spinner />;
     return (
