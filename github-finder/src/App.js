@@ -4,6 +4,8 @@ import './App.css';
 
 import axios from 'axios';
 
+import GithubState from './context/github/GithubState';
+
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 import User from './components/users/User';
@@ -62,12 +64,13 @@ const App = () => {
 
   // set alert
   const showAlert = (msg, type) => {
-    setAlert({ msg, type })
+    setAlert({ msg, type });
 
     setTimeout(() => setAlert(null), 1000);
   };
 
-    return (
+  return (
+    <GithubState>
       <BrowserRouter>
         <div className='App'>
           <Navbar />
@@ -108,7 +111,8 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
-    );
-}
+    </GithubState>
+  );
+};
 
 export default App;
